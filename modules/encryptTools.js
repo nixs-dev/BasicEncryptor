@@ -65,11 +65,16 @@ class encryptTools {
     readFile(str) {
         try {
 <<<<<<< HEAD
+<<<<<<< HEAD
           var data = fs.readFileSync(str, 'binary')
 =======
           var data = fs.readFileSync(str, 'utf8')
           console.log(data)
 >>>>>>> dc8d42e19826a9a52a08734f43d6b1c3ba6493d7
+=======
+          var data = fs.readFileSync(str, 'utf8')
+          console.log(data)
+>>>>>>> e0730fc5ff12f91c0a0d0d98d304d7a073dfe7db
 
           return data
         } catch (err) {
@@ -79,10 +84,14 @@ class encryptTools {
 
     writeFile(fileName, content, encdec) {
 <<<<<<< HEAD
+<<<<<<< HEAD
         //var content = content.replace(/\0/g, '')
 =======
         var content = content.replace(/\0/g, '')
 >>>>>>> dc8d42e19826a9a52a08734f43d6b1c3ba6493d7
+=======
+        var content = content.replace(/\0/g, '')
+>>>>>>> e0730fc5ff12f91c0a0d0d98d304d7a073dfe7db
 
 
         if(encdec) {
@@ -101,9 +110,12 @@ class encryptTools {
             fileName = 'DECRYPTED' + fileName.replace(/\0/g, '')
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             content = Buffer.from(content, 'binary');
 =======
 >>>>>>> dc8d42e19826a9a52a08734f43d6b1c3ba6493d7
+=======
+>>>>>>> e0730fc5ff12f91c0a0d0d98d304d7a073dfe7db
             fs.writeFile(fileName, content, { flag: 'a+' }, err => {})
         }
     }
