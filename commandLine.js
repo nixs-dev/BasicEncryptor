@@ -45,6 +45,24 @@ function main(args) {
 
             console.log(tools.toText(text));
         }
+        if(option == "-fileenc") {
+            let file = args[3];
+            let key = args[4];
+
+            let data = tools.readFile(file);
+            let encrypted = tools.encrypt(data, key);
+            tools.writeFile(file, encrypted, true);
+            console.log("Done");
+        }
+        if(option == "-filedec") {
+            let file = args[3];
+            let key = args[4];
+
+            let data = tools.readFile(file);
+            let decrypted = tools.decrypt(data, key);
+            tools.writeFile(file, decrypted, false);
+            console.log("Done");
+        }
     }
     else {
         console.log("Option not found!")
